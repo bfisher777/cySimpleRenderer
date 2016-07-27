@@ -29,9 +29,9 @@ public class CySRNodeView extends CySRView<CyNode> {
 		 * with layout algorithms. The cheap solution is to override the depth to be equal to width
 		 * when the depth value is zero.
 		 */
-		if(visualProperty.equals(BasicVisualLexicon.NODE_DEPTH) && value instanceof Double && ((Double)value).doubleValue() == 0.0) {
+		/*if(visualProperty.equals(BasicVisualLexicon.NODE_DEPTH) && value instanceof Double && ((Double)value).doubleValue() == 0.0) {
 			return (T) getVisualProperty(BasicVisualLexicon.NODE_WIDTH);
-		}
+		}*/
 		
 		return value;
 	}

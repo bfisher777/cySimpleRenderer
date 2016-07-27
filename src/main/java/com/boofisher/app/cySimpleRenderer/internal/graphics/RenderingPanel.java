@@ -46,7 +46,7 @@ public class RenderingPanel extends JPanel{
 			graphicsData.setIsMain(true);						
 		}else{			 
 			this.graphicsData = new GraphicsData(networkView, visualLexicon, eventBus, this, inputComponent, null);
-		}				
+		}		
 	}
 	
 	@Override

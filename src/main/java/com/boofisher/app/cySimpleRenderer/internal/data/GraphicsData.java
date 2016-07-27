@@ -72,8 +72,7 @@ public class GraphicsData {
 	private int zoom;	
 	
 	private JPanel surface;
-	private BufferedImage bufferedImage;
-	private BufferedImage renderedImage;	
+	private BufferedImage bufferedImage;	
 	
 	private JScrollPane scrollPane;
 	private boolean isMain;	
@@ -96,7 +95,6 @@ public class GraphicsData {
 		pickingData = new PickingData();
 		edgeAnalyser = new EdgeAnalyser();
 		bufferedImage = null;	
-		renderedImage = null;
 	}
 	
 	public void setATransform(AffineTransform aTransform) {
@@ -232,16 +230,6 @@ public class GraphicsData {
 	public void setBufferedImage(BufferedImage bi) {
 		if(bi != null){
 			this.bufferedImage = bi;
-		}
-	}
-	
-	public BufferedImage getRenderedImage() {
-		return renderedImage;
-	}
-	
-	public void setRenderedImage(BufferedImage bi) {
-		if(bi != null){
-			this.renderedImage = bi;
 		}
 	}
 

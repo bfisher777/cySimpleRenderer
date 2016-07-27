@@ -70,12 +70,11 @@ public class RenderNetwork implements GraphicsProcedure {
 			drawEdges(imageGraphics, networkView, midWidth, midHeight, zoomFactor);
 			drawNodes(imageGraphics, networkView, midWidth, midHeight, zoomFactor);
 			BufferedImage bImage = component.getGraphicsConfiguration().createCompatibleImage(width, height);
-			graphicsData.setBufferedImage(bImage);
-			graphicsData.setRenderedImage(bImage);
+			graphicsData.setBufferedImage(bImage);			
 		} else if(graphicsData.isMain()){
 			//do nothing network has already been drawn so clear rendered image
 			//paint background
-			Graphics2D g2d = graphicsData.getRenderedImage().createGraphics();
+			Graphics2D g2d = graphicsData.getBufferedImage().createGraphics();
 			g2d.setColor((Color) networkView.getVisualProperty(BasicVisualLexicon.NETWORK_BACKGROUND_PAINT));
 			g2d.fillRect(0,0, width, height);	
 		}			

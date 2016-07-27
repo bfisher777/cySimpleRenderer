@@ -5,6 +5,7 @@ import org.cytoscape.model.CyEdge;
 public class CySREdgeView extends CySRView<CyEdge> {
 
 	private final CyEdge edge;
+	private String name;
 	
 	public CySREdgeView(DefaultValueVault defaultValueVault, CyEdge edge) {
 		super(defaultValueVault);
@@ -16,4 +17,11 @@ public class CySREdgeView extends CySRView<CyEdge> {
 		return edge;
 	}
 	
+	public void setName(String name){
+		this.name = name;
+	}
+	
+	public String getName(){
+		return this.name;
+	}
 }

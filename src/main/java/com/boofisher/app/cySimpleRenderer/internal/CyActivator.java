@@ -86,12 +86,13 @@ public class CyActivator extends AbstractCyActivator {
 		
 		/*A RenderingEngine should provide one, immutable lexicon implementing this interface. 
 		 * This is a pre-defined tree of VisualProperties designed by the RenderingEngine developer.*/
-		VisualLexicon cySRVisualLexicon = new CySRVisualLexicon();		
+		//VisualLexicon cySRVisualLexicon = new CySRVisualLexicon();
+		VisualLexicon cySRVisualLexicon = new CySRVisualLexicon();
 		/*The Properties class represents a persistent set of properties. The Properties can be saved to a stream or loaded from a stream. 
 		 *Each key and its corresponding value in the property list is a string.*/
 		Properties cySRVisualLexiconProps = new Properties();
 		cySRVisualLexiconProps.setProperty("serviceType", "visualLexicon");
-		cySRVisualLexiconProps.setProperty("id", "CySR");
+		cySRVisualLexiconProps.setProperty("id", "CySimpleRenderer");
 		registerService(context, cySRVisualLexicon, VisualLexicon.class, cySRVisualLexiconProps);
 
 		/*EventBus allows publish-subscribe-style communication between components without 

@@ -69,6 +69,7 @@ public class CySRRenderingEngine implements RenderingEngine<CyNetwork> {
 				configuration, inputComponent);
 		panel.setIgnoreRepaint(false); 
 		panel.setDoubleBuffered(true);
+		//panel.setSize(1600, 1200);		
 		
 		// When networkView.updateView() is called it will repaint all containers it owns
 		networkView.addContainer(panel); 

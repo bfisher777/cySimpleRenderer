@@ -152,8 +152,7 @@ public class InputEventListener implements MouseListener, MouseMotionListener, M
 	}
 
 	@Override
-	public void mouseClicked(MouseEvent e) {
-		logger.warn("mouse clicked event handled");
+	public void mouseClicked(MouseEvent e) {		
 		MouseCommand clickCommand = getModifiedMouseCommand(e);		
 		clickCommand.clicked(e.getX(), e.getY());
 		updateBothRenderers();
